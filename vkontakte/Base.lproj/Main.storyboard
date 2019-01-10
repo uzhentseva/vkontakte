@@ -213,9 +213,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="pje-nZ-o1n">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" id="Ff5-Zt-XeA" customClass="GroupsCell" customModule="vkontakte" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ff5-Zt-XeA" id="M90-ee-m2z">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -228,7 +233,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cK6-N5-T4X">
-                                            <rect key="frame" x="76" y="5" width="42" height="33.5"/>
+                                            <rect key="frame" x="76" y="5" width="289" height="33.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -237,6 +242,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="JKS-zN-9jq" secondAttribute="bottom" constant="8" id="JiB-Oi-QXq"/>
                                         <constraint firstItem="JKS-zN-9jq" firstAttribute="leading" secondItem="M90-ee-m2z" secondAttribute="leading" constant="8" id="JuT-wf-yx3"/>
+                                        <constraint firstAttribute="trailing" secondItem="cK6-N5-T4X" secondAttribute="trailing" constant="10" id="LWC-8b-jnB"/>
                                         <constraint firstItem="cK6-N5-T4X" firstAttribute="leading" secondItem="JKS-zN-9jq" secondAttribute="trailing" constant="8" id="NnL-pO-EKH"/>
                                         <constraint firstAttribute="bottom" secondItem="cK6-N5-T4X" secondAttribute="bottom" constant="5" id="irs-Ng-hhY"/>
                                         <constraint firstItem="cK6-N5-T4X" firstAttribute="top" secondItem="M90-ee-m2z" secondAttribute="top" constant="5" id="jYN-3X-OyV"/>
@@ -255,6 +261,9 @@
                             <outlet property="delegate" destination="228-z7-25U" id="EXw-Mi-5ia"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="pje-nZ-o1n" id="9MJ-ly-R5v"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7R2-Xg-DqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DTh-Wz-xOI" userLabel="Exit" sceneMemberID="exit"/>
@@ -371,8 +380,8 @@
                                     <constraint firstItem="HMw-Iq-knv" firstAttribute="leading" secondItem="MIh-qc-5VG" secondAttribute="leading" constant="10" id="xtx-DL-Ddf"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="myFriendPic" destination="HMw-Iq-knv" id="UUa-e7-ooj"/>
-                                    <outlet property="myFriendsName" destination="ImB-KZ-Zf7" id="fs5-tq-lpF"/>
+                                    <outlet property="myFriendPic" destination="HMw-Iq-knv" id="7cz-GT-4GO"/>
+                                    <outlet property="myFriendsName" destination="ImB-KZ-Zf7" id="9Ct-3Z-hPb"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
