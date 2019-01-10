@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		9000B04F21E5D18E002AFF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B04E21E5D18E002AFF44 /* AppDelegate.swift */; };
-		9000B05121E5D18E002AFF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B05021E5D18E002AFF44 /* ViewController.swift */; };
 		9000B05421E5D18E002AFF44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9000B05221E5D18E002AFF44 /* Main.storyboard */; };
 		9000B05621E5D191002AFF44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9000B05521E5D191002AFF44 /* Assets.xcassets */; };
 		9000B05921E5D191002AFF44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9000B05721E5D191002AFF44 /* LaunchScreen.storyboard */; };
 		9000B06421E5D191002AFF44 /* vkontakteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B06321E5D191002AFF44 /* vkontakteTests.swift */; };
 		9000B06F21E5D191002AFF44 /* vkontakteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B06E21E5D191002AFF44 /* vkontakteUITests.swift */; };
+		9000B07D21E5D275002AFF44 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B07C21E5D275002AFF44 /* LoginFormController.swift */; };
+		9000B08321E5F22B002AFF44 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B08221E5F22B002AFF44 /* FriendsController.swift */; };
+		9000B08521E5F23E002AFF44 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B08421E5F23E002AFF44 /* FriendsCell.swift */; };
+		9000B08721E5F28A002AFF44 /* GroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B08621E5F28A002AFF44 /* GroupsController.swift */; };
+		9000B08921E5F29F002AFF44 /* GroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B08821E5F29F002AFF44 /* GroupsCell.swift */; };
+		9000B08B21E5F367002AFF44 /* MyFriendsCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B08A21E5F366002AFF44 /* MyFriendsCollectionController.swift */; };
+		9000B08D21E5F384002AFF44 /* MyFriendsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B08C21E5F384002AFF44 /* MyFriendsCollectionCell.swift */; };
+		9000B09021E72DEF002AFF44 /* MyGroupsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B08F21E72DEF002AFF44 /* MyGroupsTableController.swift */; };
+		9000B09221E72E05002AFF44 /* MyGroupsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B09121E72E05002AFF44 /* MyGroupsTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,6 @@
 /* Begin PBXFileReference section */
 		9000B04B21E5D18E002AFF44 /* vkontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9000B04E21E5D18E002AFF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9000B05021E5D18E002AFF44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9000B05321E5D18E002AFF44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9000B05521E5D191002AFF44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9000B05821E5D191002AFF44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,15 @@
 		9000B06A21E5D191002AFF44 /* vkontakteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vkontakteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9000B06E21E5D191002AFF44 /* vkontakteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkontakteUITests.swift; sourceTree = "<group>"; };
 		9000B07021E5D191002AFF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9000B07C21E5D275002AFF44 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		9000B08221E5F22B002AFF44 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
+		9000B08421E5F23E002AFF44 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
+		9000B08621E5F28A002AFF44 /* GroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsController.swift; sourceTree = "<group>"; };
+		9000B08821E5F29F002AFF44 /* GroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCell.swift; sourceTree = "<group>"; };
+		9000B08A21E5F366002AFF44 /* MyFriendsCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCollectionController.swift; sourceTree = "<group>"; };
+		9000B08C21E5F384002AFF44 /* MyFriendsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCollectionCell.swift; sourceTree = "<group>"; };
+		9000B08F21E72DEF002AFF44 /* MyGroupsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableController.swift; sourceTree = "<group>"; };
+		9000B09121E72E05002AFF44 /* MyGroupsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +113,16 @@
 		9000B04D21E5D18E002AFF44 /* vkontakte */ = {
 			isa = PBXGroup;
 			children = (
+				9000B07E21E5F193002AFF44 /* Friends */,
+				9000B07F21E5F1AE002AFF44 /* MyFriends */,
+				9000B08021E5F1B8002AFF44 /* Groups */,
+				9000B08E21E72DC6002AFF44 /* MyGroups */,
 				9000B04E21E5D18E002AFF44 /* AppDelegate.swift */,
-				9000B05021E5D18E002AFF44 /* ViewController.swift */,
 				9000B05221E5D18E002AFF44 /* Main.storyboard */,
 				9000B05521E5D191002AFF44 /* Assets.xcassets */,
 				9000B05721E5D191002AFF44 /* LaunchScreen.storyboard */,
 				9000B05A21E5D191002AFF44 /* Info.plist */,
+				9000B07C21E5D275002AFF44 /* LoginFormController.swift */,
 			);
 			path = vkontakte;
 			sourceTree = "<group>";
@@ -123,6 +143,42 @@
 				9000B07021E5D191002AFF44 /* Info.plist */,
 			);
 			path = vkontakteUITests;
+			sourceTree = "<group>";
+		};
+		9000B07E21E5F193002AFF44 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				9000B08221E5F22B002AFF44 /* FriendsController.swift */,
+				9000B08421E5F23E002AFF44 /* FriendsCell.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		9000B07F21E5F1AE002AFF44 /* MyFriends */ = {
+			isa = PBXGroup;
+			children = (
+				9000B08A21E5F366002AFF44 /* MyFriendsCollectionController.swift */,
+				9000B08C21E5F384002AFF44 /* MyFriendsCollectionCell.swift */,
+			);
+			path = MyFriends;
+			sourceTree = "<group>";
+		};
+		9000B08021E5F1B8002AFF44 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				9000B08621E5F28A002AFF44 /* GroupsController.swift */,
+				9000B08821E5F29F002AFF44 /* GroupsCell.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		9000B08E21E72DC6002AFF44 /* MyGroups */ = {
+			isa = PBXGroup;
+			children = (
+				9000B08F21E72DEF002AFF44 /* MyGroupsTableController.swift */,
+				9000B09121E72E05002AFF44 /* MyGroupsTableCell.swift */,
+			);
+			path = MyGroups;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +312,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9000B05121E5D18E002AFF44 /* ViewController.swift in Sources */,
+				9000B09221E72E05002AFF44 /* MyGroupsTableCell.swift in Sources */,
+				9000B08721E5F28A002AFF44 /* GroupsController.swift in Sources */,
+				9000B09021E72DEF002AFF44 /* MyGroupsTableController.swift in Sources */,
 				9000B04F21E5D18E002AFF44 /* AppDelegate.swift in Sources */,
+				9000B08321E5F22B002AFF44 /* FriendsController.swift in Sources */,
+				9000B08921E5F29F002AFF44 /* GroupsCell.swift in Sources */,
+				9000B07D21E5D275002AFF44 /* LoginFormController.swift in Sources */,
+				9000B08D21E5F384002AFF44 /* MyFriendsCollectionCell.swift in Sources */,
+				9000B08B21E5F367002AFF44 /* MyFriendsCollectionController.swift in Sources */,
+				9000B08521E5F23E002AFF44 /* FriendsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
