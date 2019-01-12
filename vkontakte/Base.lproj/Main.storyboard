@@ -152,13 +152,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2FO-xk-vjq">
-                                            <rect key="frame" x="8" y="8" width="48" height="48.5"/>
+                                            <rect key="frame" x="8" y="8.5" width="48" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="48" id="nTP-0X-Ho9"/>
+                                                <constraint firstAttribute="height" constant="50" id="vIK-Or-Ywh"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-hf-erP">
-                                            <rect key="frame" x="64" y="8" width="42" height="48.5"/>
+                                            <rect key="frame" x="64" y="8.5" width="42" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -219,21 +220,22 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" id="Ff5-Zt-XeA" customClass="GroupsCell" customModule="vkontakte" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="73" id="Ff5-Zt-XeA" customClass="GroupsCell" customModule="vkontakte" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ff5-Zt-XeA" id="M90-ee-m2z">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JKS-zN-9jq">
-                                            <rect key="frame" x="8" y="8" width="60" height="27.5"/>
+                                            <rect key="frame" x="8" y="8" width="60" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="ClB-CI-NW7"/>
+                                                <constraint firstAttribute="height" constant="50" id="r0u-e4-5uy"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cK6-N5-T4X">
-                                            <rect key="frame" x="76" y="5" width="289" height="33.5"/>
+                                            <rect key="frame" x="76" y="5" width="289" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -360,10 +362,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMw-Iq-knv">
-                                            <rect key="frame" x="10" y="0.0" width="174" height="138"/>
+                                            <rect key="frame" x="10" y="0.0" width="174" height="130"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-KZ-Zf7">
-                                            <rect key="frame" x="10" y="146" width="174" height="21"/>
+                                            <rect key="frame" x="10" y="138" width="174" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -373,8 +375,8 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ImB-KZ-Zf7" secondAttribute="trailing" constant="10" id="3Kw-7T-yQW"/>
                                     <constraint firstAttribute="trailing" secondItem="HMw-Iq-knv" secondAttribute="trailing" constant="10" id="8nf-fl-sWc"/>
-                                    <constraint firstAttribute="bottom" secondItem="HMw-Iq-knv" secondAttribute="bottom" constant="40" id="9Qk-wO-jeu"/>
                                     <constraint firstItem="HMw-Iq-knv" firstAttribute="top" secondItem="MIh-qc-5VG" secondAttribute="top" id="h3n-kd-teh"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="ImB-KZ-Zf7" secondAttribute="bottom" constant="11" id="hkC-eW-ay1"/>
                                     <constraint firstItem="ImB-KZ-Zf7" firstAttribute="leading" secondItem="MIh-qc-5VG" secondAttribute="leading" constant="10" id="lC7-57-jek"/>
                                     <constraint firstItem="ImB-KZ-Zf7" firstAttribute="top" secondItem="HMw-Iq-knv" secondAttribute="bottom" constant="8" id="lkE-oX-Gke"/>
                                     <constraint firstItem="HMw-Iq-knv" firstAttribute="leading" secondItem="MIh-qc-5VG" secondAttribute="leading" constant="10" id="xtx-DL-Ddf"/>
@@ -402,6 +404,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="9Bh-Od-18v"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="140-Nv-KIT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

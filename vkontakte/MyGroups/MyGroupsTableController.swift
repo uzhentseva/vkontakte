@@ -61,12 +61,12 @@ class MyGroupsTableController: UITableViewController {
                 let image = allGroupsController.allGroupPictureArray[indexPath.row]
                 
                 if !myGroupChoiceName.contains(group){
-                    myGroupChoicePic.append(image)
+                    
                     myGroupChoiceName.append(group)
+                    myGroupChoicePic.append(image)
+                    
                      tableView.reloadData()
                 }
-                
-                tableView.reloadData()
             }
         }
     }

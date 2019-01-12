@@ -62,7 +62,7 @@ class FriendsController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    // transfer data to second view Collection Controller -- REDO
+    // transfer data to second view Collection Controller -- error?
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "friendToPic" {
             
