@@ -27,6 +27,8 @@ class FriendsController: UITableViewController {
         UIImage(named: "joe.png")!
     ]
     
+    let recievedName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -41,7 +43,7 @@ class FriendsController: UITableViewController {
         return friendsArray.count
     }
     
-    
+    // get the list of friends
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsCell
         
@@ -60,6 +62,7 @@ class FriendsController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // transfer data to second view Collection Controller -- REDO
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "friendToPic" {
             

@@ -19,7 +19,7 @@ class GroupsController: UITableViewController {
     "Married",
     "Working"]
     
-    var filteredGroups = [allGroupsArray]()
+    //var filteredGroups = [allGroupsArray]()
     
     var allGroupPictureArray = [
         UIImage(named: "Family.png")!,
@@ -27,7 +27,7 @@ class GroupsController: UITableViewController {
         UIImage(named: "Married.png")!,
         UIImage(named: "Working.png")!]
     
-    let searchController = UISearchController(searchResultsController: nil)
+    //let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,10 +66,10 @@ class GroupsController: UITableViewController {
     
     // MARK: - Private instance methods
     
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
+//    func searchBarIsEmpty() -> Bool {
+//        // Returns true if the text is empty or nil
+//        return searchController.searchBar.text?.isEmpty ?? true
+//    }
     
 //    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
 //
