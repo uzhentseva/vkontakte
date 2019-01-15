@@ -363,6 +363,10 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMw-Iq-knv">
                                             <rect key="frame" x="10" y="0.0" width="174" height="130"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="174" id="Leh-Sd-6yJ"/>
+                                                <constraint firstAttribute="height" constant="130" id="ouk-cg-XjN"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-KZ-Zf7">
                                             <rect key="frame" x="10" y="138" width="174" height="21"/>

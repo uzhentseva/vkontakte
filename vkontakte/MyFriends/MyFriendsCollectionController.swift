@@ -12,31 +12,16 @@ let reuseIdentifier = "myFriendCell"
 
 class MyFriendsCollectionController: UICollectionViewController {
     
-    
-//    @IBOutlet weak var FriendImage: UIImageView!
-//    @IBOutlet weak var NameLabel: UILabel!
-    
-    var myFriendNames = String()
-    var myFriendPicture = UIImage()
+    var myFriendNames = [String]()
+    var myFriendPicture = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        FriendImage.image = myFriendPicture
-//        NameLabel.text = myFriendNames
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
     }
-
-
-    // MARK: - Navigation
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
-
 
     // MARK: UICollectionViewDataSource
 
@@ -47,4 +32,18 @@ class MyFriendsCollectionController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myFriendCell", for: indexPath) as! MyFriendsCollectionCell
+        
+        let friendN = myFriendNames[indexPath.row]
+        let friendP = myFriendPicture[indexPath.row]
+        
+        cell.myFriendsName.text = friendN
+        cell.myFriendPic.image = friendP
+        
+        return cell
+    }
+    
 }

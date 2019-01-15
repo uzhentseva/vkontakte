@@ -66,15 +66,15 @@ class FriendsController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "friendToPic" {
             
+            let secondVC: MyFriendsCollectionController = segue.destination as! MyFriendsCollectionController
+
             if let indexPath = tableView.indexPathForSelectedRow {
                 
-                let friend = friendsArray[indexPath.row]
-                let image = friendsPicArray[indexPath.row]
+                let friendName = friendsArray[indexPath.row]
+                let friendImage = friendsPicArray[indexPath.row]
                 
-                let secondVC: MyFriendsCollectionController = segue.destination as! MyFriendsCollectionController
-                
-                secondVC.myFriendNames = friend
-                secondVC.myFriendPicture = image
+                secondVC.myFriendNames = [friendName]
+                secondVC.myFriendPicture = [friendImage]
                 
                 
             }
