@@ -18,24 +18,22 @@ class MyFriendsCollectionController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Вот следующие строчки необходимо было закомментировать!!!
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
     }
 
     // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myFriendCell", for: indexPath) as! MyFriendsCollectionCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myFriendCell", for: indexPath) as? MyFriendsCollectionCell else {
+            fatalError("Cannot create 'My Friend Cell'")
+        }
         
         let friendN = myFriendNames[indexPath.row]
         let friendP = myFriendPicture[indexPath.row]

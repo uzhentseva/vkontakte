@@ -37,23 +37,23 @@
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vkontakte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McR-QH-B1c">
                                         <rect key="frame" x="40" y="130" width="295" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvd-8m-k1i">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password (no password)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvd-8m-k1i">
                                         <rect key="frame" x="40" y="369.5" width="295" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLQ-43-rB2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login (no login)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLQ-43-rB2">
                                         <rect key="frame" x="40" y="270.5" width="295" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vkontakte" translatesAutoresizingMaskIntoConstraints="NO" id="QLb-6B-C7Z">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vkontakte" translatesAutoresizingMaskIntoConstraints="NO" id="QLb-6B-C7Z">
                                         <rect key="frame" x="137" y="22" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="5Gk-mx-49p"/>
@@ -159,22 +159,22 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-hf-erP">
-                                            <rect key="frame" x="64" y="8.5" width="42" height="50"/>
+                                            <rect key="frame" x="64" y="8.5" width="303" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="bT4-hf-erP" firstAttribute="leading" secondItem="2FO-xk-vjq" secondAttribute="trailing" constant="8" id="3VJ-Yq-cqz"/>
                                         <constraint firstItem="2FO-xk-vjq" firstAttribute="leading" secondItem="d5n-MV-dbE" secondAttribute="leading" constant="8" id="HFx-t8-f63"/>
-                                        <constraint firstItem="bT4-hf-erP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2FO-xk-vjq" secondAttribute="trailing" constant="8" symbolic="YES" id="Lfb-f8-wGl"/>
+                                        <constraint firstAttribute="trailing" secondItem="bT4-hf-erP" secondAttribute="trailing" constant="8" id="MyE-eK-Sou"/>
                                         <constraint firstItem="bT4-hf-erP" firstAttribute="centerY" secondItem="d5n-MV-dbE" secondAttribute="centerY" id="N04-6U-jBP"/>
                                         <constraint firstItem="bT4-hf-erP" firstAttribute="top" secondItem="d5n-MV-dbE" secondAttribute="top" constant="8" id="RvY-EE-shG"/>
                                         <constraint firstItem="2FO-xk-vjq" firstAttribute="centerY" secondItem="d5n-MV-dbE" secondAttribute="centerY" id="ZHB-UM-bz5"/>
                                         <constraint firstAttribute="bottom" secondItem="bT4-hf-erP" secondAttribute="bottom" constant="8" id="bsb-Iu-nb2"/>
                                         <constraint firstItem="2FO-xk-vjq" firstAttribute="top" secondItem="d5n-MV-dbE" secondAttribute="top" constant="8" id="cuN-uk-HgW"/>
                                         <constraint firstAttribute="bottom" secondItem="2FO-xk-vjq" secondAttribute="bottom" constant="8" id="edT-Po-olP"/>
-                                        <constraint firstAttribute="trailing" secondItem="bT4-hf-erP" secondAttribute="trailing" constant="269" id="vIc-YC-bm2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -205,6 +205,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWC-UY-48A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3120.8000000000002" y="473.6131934032984"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="QIe-p7-2bk">
+            <objects>
+                <collectionViewController id="YOJ-Cj-Nd8" customClass="NewsController" customModule="vkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ty0-Rd-AEO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7bJ-fU-tMF">
+                            <size key="itemSize" width="186" height="197"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="vcn-Ta-wij" customClass="NewsCell" customModule="vkontakte" customModuleProvider="target">
+                                <rect key="frame" x="94.5" y="0.0" width="186" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="186" height="197"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoebe" translatesAutoresizingMaskIntoConstraints="NO" id="kO1-eU-e2a">
+                                            <rect key="frame" x="0.0" y="0.0" width="186" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="INV-IK-3Vx"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="kO1-eU-e2a" firstAttribute="leading" secondItem="vcn-Ta-wij" secondAttribute="leading" id="12E-jj-MgW"/>
+                                    <constraint firstItem="kO1-eU-e2a" firstAttribute="centerX" secondItem="vcn-Ta-wij" secondAttribute="centerX" id="5nw-QM-vVm"/>
+                                    <constraint firstItem="kO1-eU-e2a" firstAttribute="top" secondItem="vcn-Ta-wij" secondAttribute="top" id="bUd-NH-Fmc"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="YOJ-Cj-Nd8" id="zsB-t5-lQj"/>
+                            <outlet property="delegate" destination="YOJ-Cj-Nd8" id="VEj-vr-Hd0"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="fd0-EM-aTB"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icn-ag-Zm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.8" y="1194.1529235382309"/>
         </scene>
         <!--Groups Controller-->
         <scene sceneID="397-oS-jzP">
@@ -242,11 +290,11 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="cK6-N5-T4X" secondAttribute="bottom" constant="8" id="32G-aj-U3P"/>
                                         <constraint firstAttribute="bottom" secondItem="JKS-zN-9jq" secondAttribute="bottom" constant="8" id="JiB-Oi-QXq"/>
                                         <constraint firstItem="JKS-zN-9jq" firstAttribute="leading" secondItem="M90-ee-m2z" secondAttribute="leading" constant="8" id="JuT-wf-yx3"/>
                                         <constraint firstAttribute="trailing" secondItem="cK6-N5-T4X" secondAttribute="trailing" constant="10" id="LWC-8b-jnB"/>
                                         <constraint firstItem="cK6-N5-T4X" firstAttribute="leading" secondItem="JKS-zN-9jq" secondAttribute="trailing" constant="8" id="NnL-pO-EKH"/>
-                                        <constraint firstAttribute="bottom" secondItem="cK6-N5-T4X" secondAttribute="bottom" constant="5" id="irs-Ng-hhY"/>
                                         <constraint firstItem="cK6-N5-T4X" firstAttribute="top" secondItem="M90-ee-m2z" secondAttribute="top" constant="5" id="jYN-3X-OyV"/>
                                         <constraint firstItem="JKS-zN-9jq" firstAttribute="top" secondItem="M90-ee-m2z" secondAttribute="top" constant="8" id="sgm-LX-k5Q"/>
                                     </constraints>
@@ -288,15 +336,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="62.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enA-DG-C09">
-                                            <rect key="frame" x="8" y="4" width="40" height="40"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enA-DG-C09">
+                                            <rect key="frame" x="8" y="4.5" width="60" height="60"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="40h-wb-4Gz"/>
-                                                <constraint firstAttribute="width" constant="40" id="Laa-dW-KFS"/>
+                                                <constraint firstAttribute="height" constant="60" id="40h-wb-4Gz"/>
+                                                <constraint firstAttribute="width" constant="60" id="Laa-dW-KFS"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVR-uK-eyK">
-                                            <rect key="frame" x="58" y="10" width="307" height="28"/>
+                                            <rect key="frame" x="78" y="10.5" width="287" height="48"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -348,28 +396,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xCW-Mk-sTc">
-                            <size key="itemSize" width="194" height="178"/>
+                            <size key="itemSize" width="194" height="225"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myFriendCell" id="MIh-qc-5VG" customClass="MyFriendsCollectionCell" customModule="vkontakte" customModuleProvider="target">
-                                <rect key="frame" x="90.5" y="0.0" width="194" height="178"/>
+                                <rect key="frame" x="90.5" y="0.0" width="194" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="194" height="178"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="194" height="225"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMw-Iq-knv">
-                                            <rect key="frame" x="10" y="0.0" width="174" height="130"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMw-Iq-knv">
+                                            <rect key="frame" x="10" y="0.0" width="174" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="174" id="Leh-Sd-6yJ"/>
-                                                <constraint firstAttribute="height" constant="130" id="ouk-cg-XjN"/>
+                                                <constraint firstAttribute="height" constant="150" id="ouk-cg-XjN"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-KZ-Zf7">
-                                            <rect key="frame" x="10" y="138" width="174" height="21"/>
+                                            <rect key="frame" x="10" y="158" width="174" height="48"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -415,6 +463,7 @@
                     <connections>
                         <segue destination="th4-wx-eWt" kind="relationship" relationship="viewControllers" id="kKF-WB-lNg"/>
                         <segue destination="VPq-5R-qz4" kind="relationship" relationship="viewControllers" id="DEX-5q-ity"/>
+                        <segue destination="ONe-vs-hqA" kind="relationship" relationship="viewControllers" id="Yer-7d-Abd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6YG-Zv-Fwd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,8 +508,27 @@
             </objects>
             <point key="canvasLocation" x="1929" y="473"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EtZ-6H-kKz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ONe-vs-hqA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="w3D-21-fb7"/>
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r2y-3q-4h3">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YOJ-Cj-Nd8" kind="relationship" relationship="viewControllers" id="JE7-io-XGf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Syh-1x-2FK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="1195"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="phoebe" width="136.5" height="158.25"/>
         <image name="vkontakte" width="1200" height="1200"/>
     </resources>
 </document>
