@@ -24,6 +24,8 @@
 		9000B09221E72E05002AFF44 /* MyGroupsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000B09121E72E05002AFF44 /* MyGroupsTableCell.swift */; };
 		904055BD21F1C728002EA859 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904055BC21F1C728002EA859 /* NewsController.swift */; };
 		904055BF21F1C73A002EA859 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904055BE21F1C73A002EA859 /* NewsCell.swift */; };
+		908505CA21F628D9008CD725 /* FriendPhotoAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908505C921F628D9008CD725 /* FriendPhotoAvatar.swift */; };
+		908505CC21F64F52008CD725 /* OuterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908505CB21F64F52008CD725 /* OuterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		9000B09121E72E05002AFF44 /* MyGroupsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableCell.swift; sourceTree = "<group>"; };
 		904055BC21F1C728002EA859 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		904055BE21F1C73A002EA859 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		908505C921F628D9008CD725 /* FriendPhotoAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoAvatar.swift; sourceTree = "<group>"; };
+		908505CB21F64F52008CD725 /* OuterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 			children = (
 				9000B08221E5F22B002AFF44 /* FriendsController.swift */,
 				9000B08421E5F23E002AFF44 /* FriendsCell.swift */,
+				908505C921F628D9008CD725 /* FriendPhotoAvatar.swift */,
+				908505CB21F64F52008CD725 /* OuterView.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -330,7 +336,9 @@
 				904055BD21F1C728002EA859 /* NewsController.swift in Sources */,
 				9000B08721E5F28A002AFF44 /* GroupsController.swift in Sources */,
 				9000B09021E72DEF002AFF44 /* MyGroupsTableController.swift in Sources */,
+				908505CC21F64F52008CD725 /* OuterView.swift in Sources */,
 				9000B04F21E5D18E002AFF44 /* AppDelegate.swift in Sources */,
+				908505CA21F628D9008CD725 /* FriendPhotoAvatar.swift in Sources */,
 				9000B08321E5F22B002AFF44 /* FriendsController.swift in Sources */,
 				9000B08921E5F29F002AFF44 /* GroupsCell.swift in Sources */,
 				9000B07D21E5D275002AFF44 /* LoginFormController.swift in Sources */,
