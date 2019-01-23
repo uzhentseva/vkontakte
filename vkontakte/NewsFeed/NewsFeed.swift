@@ -14,7 +14,7 @@ class FeedCollectionViewLayout: UICollectionViewLayout {
     
     var columnsCount = 2                  // Количество столбцов
     
-    var cellHeight: CGFloat = 128         // Высота ячейки
+    var cellHeight: CGFloat = 256         // Высота ячейки
     
     private var totalCellsHeight: CGFloat = 0 // Хранит суммарную высоту всех ячеек
     

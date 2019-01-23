@@ -57,13 +57,13 @@ class MyGroupsTableController: UITableViewController {
             
             if let indexPath = allGroupsController.tableView.indexPathForSelectedRow {
                 
-                let group = allGroupsController.allGroupsArray[indexPath.row]
-                let image = allGroupsController.allGroupPictureArray[indexPath.row]
+                let group = allGroupsController.allGroupsArray[indexPath.row].name
+                let image = UIImage(named: allGroupsController.allGroupsArray[indexPath.row].image)
                 
                 if !myGroupChoiceName.contains(group){
                     
                     myGroupChoiceName.append(group)
-                    myGroupChoicePic.append(image)
+                    myGroupChoicePic.append(image!)
                     
                      tableView.reloadData()
                 }
