@@ -15,8 +15,8 @@ class GroupsController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    var allGroupsArray = [Groups]()
-    var filteredGroups = [Groups]()
+    var allGroupsArray = [Group]()
+    var filteredGroups = [Group]()
     
     
     override func viewDidLoad() {
@@ -33,15 +33,11 @@ class GroupsController: UITableViewController {
         searchController.searchBar.scopeButtonTitles = ["All", "Gellers", "Other"]
         searchController.searchBar.delegate = self
         
-        allGroupsArray = [Groups(name: "Family", category: "Gellers", image: "Family.png"),
-                          Groups(name: "Singers", category: "Other", image: "Singers.png"),
-                          Groups(name: "Married", category: "Other", image: "Married.png"),
-                          Groups(name: "Work", category: "Gellers", image: "Working.png")]
+        allGroupsArray = [Group(name: "Family", category: "Gellers", image: "Family.png"),
+                          Group(name: "Singers", category: "Other", image: "Singers.png"),
+                          Group(name: "Married", category: "Other", image: "Married.png"),
+                          Group(name: "Work", category: "Gellers", image: "Working.png")]
 
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,16 +51,11 @@ class GroupsController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as! GroupsCell
         
-       let group: Groups
+        let group = isFiltering() ? filteredGroups[indexPath.row] : allGroupsArray[indexPath.row]
         
-        if isFiltering() {
-            group = filteredGroups[indexPath.row]
-        } else {
-            group = allGroupsArray[indexPath.row]
-        }
-        
-        cell.GroupLable.text = allGroupsArray[indexPath.row].name
-        cell.GroupImage.image = UIImage(named: allGroupsArray[indexPath.row].image)
+        print("\(indexPath.row): \(group.name)")
+        cell.GroupLable.text = group.name
+        cell.GroupImage.image = UIImage(named: group.image)
         
         return cell
     }
@@ -77,7 +68,7 @@ class GroupsController: UITableViewController {
     
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        filteredGroups = allGroupsArray.filter({( group : Groups) -> Bool in
+        filteredGroups = allGroupsArray.filter { (group : Group) -> Bool in
             let doesCategoryMatch = (scope == "All") || (group.category == scope)
             
             if searchBarIsEmpty() {
@@ -85,7 +76,7 @@ class GroupsController: UITableViewController {
             } else {
                 return group.name.lowercased().contains(searchText.lowercased())
             }
-        })
+        }
         tableView.reloadData()
     }
     
@@ -98,7 +89,7 @@ class GroupsController: UITableViewController {
 }
 
 
-class Groups {
+class Group {
     let name: String
     let category: String
     let image: String
