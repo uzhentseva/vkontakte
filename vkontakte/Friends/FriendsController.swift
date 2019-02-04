@@ -16,7 +16,9 @@ import UIKit
         "Phoebe",
         "Ross",
         "Chandler",
-        "Joe"]
+        "Joe",
+        "Janice",
+        "Jill"]
     
     var friendsPicArray = [
         UIImage(named: "rachel.png")!,
@@ -24,7 +26,9 @@ import UIKit
         UIImage(named: "phoebe.png")!,
         UIImage(named: "ross.png")!,
         UIImage(named: "chandler.png")!,
-        UIImage(named: "joe.png")!]
+        UIImage(named: "joe.png")!,
+        UIImage(named: "janice.png")!,
+        UIImage(named: "jill.png")!]
     
     @IBInspectable var shadowOffset: CGSize = CGSize.zero
     @IBInspectable var shadowOpacity: Float = 0.6

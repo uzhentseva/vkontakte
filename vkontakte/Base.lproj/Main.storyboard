@@ -129,6 +129,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="EnterButton" destination="ZDl-oh-1RK" id="wFa-eu-LXj"/>
+                        <outlet property="VkLabel" destination="McR-QH-B1c" id="2tp-pR-xAx"/>
+                        <outlet property="VkLogo" destination="QLb-6B-C7Z" id="1os-Ic-e2H"/>
                         <outlet property="loginInput" destination="Ckf-el-xcu" id="YeD-mH-wGd"/>
                         <outlet property="passwordInput" destination="opk-04-tNg" id="zeb-dV-htH"/>
                         <outlet property="scrollView" destination="sh1-zC-0nd" id="KmK-qM-xhv"/>
@@ -136,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="164"/>
+            <point key="canvasLocation" x="8.8000000000000007" y="163.26836581709148"/>
         </scene>
         <!--My Groups-->
         <scene sceneID="QRQ-Da-fzo">
@@ -207,7 +210,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWC-UY-48A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3120.8000000000002" y="473.6131934032984"/>
+            <point key="canvasLocation" x="3065" y="163"/>
         </scene>
         <!--Item-->
         <scene sceneID="QIe-p7-2bk">
@@ -261,7 +264,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Icn-ag-Zm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928.8" y="1194.1529235382309"/>
+            <point key="canvasLocation" x="3065" y="922"/>
         </scene>
         <!--Groups Controller-->
         <scene sceneID="397-oS-jzP">
@@ -315,7 +318,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7R2-Xg-DqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DTh-Wz-xOI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4072.8000000000002" y="473.6131934032984"/>
+            <point key="canvasLocation" x="4073" y="162"/>
         </scene>
         <!--My Friends-->
         <scene sceneID="Lh6-8X-Kha">
@@ -396,7 +399,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3D6-xU-jIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3120.8000000000002" y="-261.31934032983509"/>
+            <point key="canvasLocation" x="3066" y="-591"/>
         </scene>
         <!--My Friends Collection Controller-->
         <scene sceneID="uke-Aj-YBR">
@@ -458,7 +461,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z35-C7-kk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4072.8000000000002" y="-262.21889055472263"/>
+            <point key="canvasLocation" x="4073" y="-591"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hpZ-V8-TdG">
@@ -469,7 +472,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="140-Nv-KIT">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="th4-wx-eWt" kind="relationship" relationship="viewControllers" id="kKF-WB-lNg"/>
@@ -481,11 +484,11 @@
             </objects>
             <point key="canvasLocation" x="998" y="163"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Friends-->
         <scene sceneID="ZsB-dM-TpQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="th4-wx-eWt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="H9Z-ub-rNX"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="friends-1" id="H9Z-ub-rNX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4aO-Sg-rN7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -498,13 +501,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdW-sw-dBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="-262"/>
+            <point key="canvasLocation" x="1929" y="-590"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Groups-->
         <scene sceneID="MFZ-wh-a8p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VPq-5R-qz4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="tTm-cf-xlM"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="star-1" id="tTm-cf-xlM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fT3-wb-uEB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -517,13 +520,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaG-Uh-tJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="473"/>
+            <point key="canvasLocation" x="1929" y="163"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Pictures-->
         <scene sceneID="EtZ-6H-kKz">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ONe-vs-hqA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="w3D-21-fb7"/>
+                    <tabBarItem key="tabBarItem" title="Pictures" image="pics-1" id="w3D-21-fb7"/>
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r2y-3q-4h3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -536,11 +539,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syh-1x-2FK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="1195"/>
+            <point key="canvasLocation" x="1929" y="923"/>
         </scene>
     </scenes>
     <resources>
+        <image name="friends-1" width="24" height="24"/>
+        <image name="pics-1" width="12" height="12"/>
         <image name="rosa" width="875" height="431"/>
+        <image name="star-1" width="12" height="12"/>
         <image name="vkontakte" width="1200" height="1200"/>
     </resources>
 </document>

@@ -12,15 +12,21 @@ let reuseIdentifier = "myFriendCell"
 
 class MyFriendsCollectionController: UICollectionViewController {
     
+    
     var myFriendNames = [String]()
     var myFriendPicture = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Вот следующие строчки необходимо было закомментировать!!!
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        UIView.animate(withDuration: 0.5,
+//                       delay: 0,
+//                       usingSpringWithDamping: 0.5,
+//                       initialSpringVelocity: 0,
+//                       options: [],
+//                       animations: {
+//                        self.myFriendPicture.origin.y -= 100
+//        })
 
     }
 

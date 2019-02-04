@@ -9,12 +9,16 @@
 import UIKit
 
 class LoginFormController: UIViewController {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
-   
+    @IBOutlet weak var VkLogo: UIImageView!
+    @IBOutlet weak var VkLabel: UILabel!
+    
+    @IBOutlet weak var EnterButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +26,45 @@ class LoginFormController: UIViewController {
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         // присваиваем его UIScrollVIew
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        
+        UIView.animate(withDuration: 1.5, delay: 0, options: [.repeat],
+                       animations: {
+                        //self.VkLogo.alpha = 1
+                        self.VkLogo.alpha = 0
+        })
+        
+        UIView.animate(withDuration: 1.5, delay: 0.5, options: [.repeat],
+                       animations: {
+                        //self.VkLabel.alpha = 1
+                        self.VkLabel.alpha = 0
+        })
+        
+        //
+        //        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut],
+        //                       animations: {
+        //                        self.loginInput.center.x += self.view.bounds.width
+        //        },
+        //                       completion: nil
+        //        )
+        //
+        //        UIView.animate(withDuration: 0.3, delay: 0.3, options: [.curveEaseOut],
+        //                       animations: {
+        //                        self.passwordInput.center.x += self.view.bounds.width
+        //        },
+        //                       completion: nil
+        //        )
+        //
+        //        UIView.animate(withDuration: 0.3, delay: 0.6, options: [.curveEaseOut],
+        //                       animations: {
+        //                        self.EnterButton.center.x += self.view.bounds.width
+        //        },
+        //                       completion: nil
+        //        )
+        
+        
+        
+        
+        
     }
     
     // Когда клавиатура появляется
@@ -46,7 +89,14 @@ class LoginFormController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //        loginInput.center.x  -= view.bounds.width
+        //        passwordInput.center.x -= view.bounds.width
+        //        EnterButton.center.x -= view.bounds.width
+        
         super.viewWillAppear(animated)
+        
+        
+        
         
         // Подписываемся на два уведомления: одно приходит при появлении клавиатуры
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
