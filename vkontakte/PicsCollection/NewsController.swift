@@ -8,9 +8,9 @@
 
 import UIKit
 
-//WRONG --- JUST TEST --- HW6 to be redone
+//------ JUST TESTING LAYOUTS
 class NewsController: UICollectionViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

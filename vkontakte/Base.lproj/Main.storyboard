@@ -74,12 +74,12 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDl-oh-1RK">
                                         <rect key="frame" x="80" y="468.5" width="215" height="40"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="dXG-bO-MwC"/>
                                         </constraints>
                                         <state key="normal" title="ENTER">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="wPF-6W-KqN" kind="show" id="rAn-ts-UH0"/>
@@ -117,7 +117,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sh1-zC-0nd" secondAttribute="bottom" id="8hj-e9-g85"/>
                             <constraint firstItem="fBP-th-2dJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="J9H-dT-uKv"/>
@@ -236,21 +236,44 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sochi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nif-T3-1FJ">
-                                            <rect key="frame" x="8" y="208" width="240" height="35"/>
+                                            <rect key="frame" x="8" y="208" width="43" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2B-cU-f2D" customClass="LikeButton" customModule="vkontakte" customModuleProvider="target">
+                                            <rect key="frame" x="59" y="208" width="34" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <state key="normal" title="💙0"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfV-vM-GSH">
+                                            <rect key="frame" x="101" y="208" width="34" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <state key="normal" title="💬0"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04a-0P-yXk">
+                                            <rect key="frame" x="143" y="208" width="34" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <state key="normal" title="📢0"/>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="kO1-eU-e2a" firstAttribute="leading" secondItem="vcn-Ta-wij" secondAttribute="leading" id="12E-jj-MgW"/>
+                                    <constraint firstItem="N2B-cU-f2D" firstAttribute="leading" secondItem="nif-T3-1FJ" secondAttribute="trailing" constant="8" symbolic="YES" id="1QX-lI-xfa"/>
                                     <constraint firstItem="kO1-eU-e2a" firstAttribute="centerX" secondItem="vcn-Ta-wij" secondAttribute="centerX" id="5nw-QM-vVm"/>
-                                    <constraint firstAttribute="trailing" secondItem="nif-T3-1FJ" secondAttribute="trailing" constant="8" id="8qB-wj-NiF"/>
+                                    <constraint firstItem="N2B-cU-f2D" firstAttribute="top" secondItem="kO1-eU-e2a" secondAttribute="bottom" constant="8" id="HtE-Hp-isS"/>
+                                    <constraint firstItem="qfV-vM-GSH" firstAttribute="top" secondItem="kO1-eU-e2a" secondAttribute="bottom" constant="8" id="M3B-hB-3UJ"/>
                                     <constraint firstItem="nif-T3-1FJ" firstAttribute="leading" secondItem="vcn-Ta-wij" secondAttribute="leading" constant="8" id="UDg-o5-wpr"/>
                                     <constraint firstItem="kO1-eU-e2a" firstAttribute="top" secondItem="vcn-Ta-wij" secondAttribute="top" id="bUd-NH-Fmc"/>
                                     <constraint firstItem="nif-T3-1FJ" firstAttribute="top" secondItem="kO1-eU-e2a" secondAttribute="bottom" constant="8" id="eYo-wq-sYc"/>
                                     <constraint firstAttribute="bottom" secondItem="nif-T3-1FJ" secondAttribute="bottom" constant="8" id="hPI-Uo-RmI"/>
+                                    <constraint firstItem="qfV-vM-GSH" firstAttribute="leading" secondItem="N2B-cU-f2D" secondAttribute="trailing" constant="8" id="jkY-fL-EJu"/>
+                                    <constraint firstAttribute="bottom" secondItem="N2B-cU-f2D" secondAttribute="bottom" constant="8" id="mHg-ng-N1X"/>
+                                    <constraint firstAttribute="bottom" secondItem="qfV-vM-GSH" secondAttribute="bottom" constant="8" id="r37-VQ-qI2"/>
+                                    <constraint firstItem="04a-0P-yXk" firstAttribute="leading" secondItem="qfV-vM-GSH" secondAttribute="trailing" constant="8" id="u4h-Op-PYl"/>
+                                    <constraint firstAttribute="bottom" secondItem="04a-0P-yXk" secondAttribute="bottom" constant="8" id="uW4-s2-8tJ"/>
+                                    <constraint firstItem="04a-0P-yXk" firstAttribute="top" secondItem="kO1-eU-e2a" secondAttribute="bottom" constant="8" id="xYW-zF-7ou"/>
                                 </constraints>
                                 <size key="customSize" width="256" height="251"/>
                             </collectionViewCell>
@@ -264,7 +287,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Icn-ag-Zm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3065" y="922"/>
+            <point key="canvasLocation" x="3064.8000000000002" y="921.58920539730138"/>
         </scene>
         <!--Groups Controller-->
         <scene sceneID="397-oS-jzP">
