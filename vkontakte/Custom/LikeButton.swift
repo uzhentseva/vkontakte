@@ -11,7 +11,6 @@ import UIKit
 class LikeButton: UIButton {
 
     var isOn = false
-   // var button = LikeButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,13 +35,11 @@ class LikeButton: UIButton {
         
         isOn = bool
         
-       //let color = bool ? UIColor.clear : .clear
         let title = bool ? "♥️1" : "💙0"
         let titleColor = bool ? UIColor.red : UIColor.gray
         
         setTitle(title, for: .normal)
         setTitleColor(titleColor, for: .normal)
-        //backgroundColor = color
     }
 
 }
