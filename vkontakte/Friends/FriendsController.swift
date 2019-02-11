@@ -10,6 +10,11 @@ import UIKit
 
 @IBDesignable class FriendsController: UITableViewController {
     
+    struct Section {
+        let letter : String
+        let names : [String]
+    }
+    
     var friendsArray = [
         "Rachel",
         "Monika",
@@ -30,6 +35,8 @@ import UIKit
         UIImage(named: "janice.png")!,
         UIImage(named: "jill.png")!]
     
+    var sections = [Section]()
+    
     @IBInspectable var shadowOffset: CGSize = CGSize.zero
     @IBInspectable var shadowOpacity: Float = 0.6
     @IBInspectable var shadowRadius: CGFloat = 5
@@ -39,17 +46,43 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let groupedDictionary = Dictionary(grouping: friendsArray, by: {String($0.prefix(1))})
+        // get the keys and sort them
+        let keys = groupedDictionary.keys.sorted()
+        // map the sorted keys to a struct
+        sections = keys.map{ Section(letter: $0, names: groupedDictionary[$0]!.sorted()) }
+        
+        self.tableView.reloadData()
+        
     }
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sections[section].names.count
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friendsArray.count
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int{
+        return sections.count
     }
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return sections.map{$0.letter}
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].letter
+    }
+    
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return friendsArray.count
+//    }
+    
     
     // get the list of friends
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,11 +97,15 @@ import UIKit
             outerView.backgroundColor = UIColor.clear
         }
         
-        let friend = friendsArray[indexPath.row]
+        let section = sections[indexPath.section]
+        let username = section.names[indexPath.row]
+        
+        //let friend = friendsArray[indexPath.row]
         let friendPic = friendsPicArray[indexPath.row]
         
-        cell.allFriends.text = friend
+        //cell.allFriends.text = friend
         cell.friendImage.image = friendPic
+        cell.textLabel?.text = username
         
         return cell
     }
