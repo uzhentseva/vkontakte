@@ -13,9 +13,8 @@ let reuseIdentifier = "myFriendCell"
 class MyFriendsCollectionController: UICollectionViewController {
     
     
-    var myFriendNames = [String]()
-    var myFriendPicture = [UIImage]()
-
+    var myFriend = Section(names: "a")
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,12 +39,9 @@ class MyFriendsCollectionController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myFriendCell", for: indexPath) as? MyFriendsCollectionCell else {
             fatalError("Cannot create 'My Friend Cell'")
         }
-        
-        let friendN = myFriendNames[indexPath.row]
-        let friendP = myFriendPicture[indexPath.row]
-        
-        cell.myFriendsName.text = friendN
-        cell.myFriendPic.image = friendP
+
+        cell.myFriendsName.text = myFriend.names
+        cell.myFriendPic.image = myFriend.avatar
         
         return cell
     }

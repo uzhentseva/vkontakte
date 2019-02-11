@@ -11,8 +11,6 @@ import UIKit
 
 class GroupsController: UITableViewController {
     
-   // @IBOutlet weak var searchBar: UISearchBar!
-    
     let searchController = UISearchController(searchResultsController: nil)
     
     var allGroupsArray = [Group]()

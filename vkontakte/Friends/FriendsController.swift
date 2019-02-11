@@ -4,54 +4,45 @@
 //
 //  Created by Uzh on 09/01/2019.
 //  Copyright © 2019 Uzh. All rights reserved.
-//
 
 import UIKit
 
+struct Section {
+    
+    let names : String
+    var avatar: UIImage? {
+        return UIImage(named: "\(names.lowercased()).png")
+    }
+    var letter: Character {
+        return names.first as! Character
+    }
+
+}
+
 @IBDesignable class FriendsController: UITableViewController {
     
-    struct Section {
-        let letter : String
-        let names : [String]
-    }
     
-    var friendsArray = [
-        "Rachel",
-        "Monika",
-        "Phoebe",
-        "Ross",
-        "Chandler",
-        "Joe",
-        "Janice",
-        "Jill"]
-    
-    var friendsPicArray = [
-        UIImage(named: "rachel.png")!,
-        UIImage(named: "monika.png")!,
-        UIImage(named: "phoebe.png")!,
-        UIImage(named: "ross.png")!,
-        UIImage(named: "chandler.png")!,
-        UIImage(named: "joe.png")!,
-        UIImage(named: "janice.png")!,
-        UIImage(named: "jill.png")!]
-    
-    var sections = [Section]()
+    var friends: [Section] = []
     
     @IBInspectable var shadowOffset: CGSize = CGSize.zero
     @IBInspectable var shadowOpacity: Float = 0.6
     @IBInspectable var shadowRadius: CGFloat = 5
     @IBInspectable var shadowColor: UIColor = UIColor.gray
     
-    let recievedName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let groupedDictionary = Dictionary(grouping: friendsArray, by: {String($0.prefix(1))})
-        // get the keys and sort them
-        let keys = groupedDictionary.keys.sorted()
-        // map the sorted keys to a struct
-        sections = keys.map{ Section(letter: $0, names: groupedDictionary[$0]!.sorted()) }
+        friends = [
+            Section(names: "Rachel"),
+            Section(names: "Monika"),
+            Section(names: "Phoebe"),
+            Section(names: "Ross"),
+            Section(names: "Chandler"),
+            Section(names: "Joe"),
+            Section(names: "Janice"),
+            Section(names: "Jill")
+        ]
         
         self.tableView.reloadData()
         
@@ -60,29 +51,9 @@ import UIKit
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].names.count
+        return friends.count
     }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int{
-        return sections.count
-    }
-    
-    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return sections.map{$0.letter}
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].letter
-    }
-    
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-    
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return friendsArray.count
-//    }
-    
+
     
     // get the list of friends
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,22 +68,13 @@ import UIKit
             outerView.backgroundColor = UIColor.clear
         }
         
-        let section = sections[indexPath.section]
-        let username = section.names[indexPath.row]
-        
-        //let friend = friendsArray[indexPath.row]
-        let friendPic = friendsPicArray[indexPath.row]
-        
-        //cell.allFriends.text = friend
-        cell.friendImage.image = friendPic
-        cell.textLabel?.text = username
+        let friend = self.friends[indexPath.row]
+
+        cell.friendImage.image = friend.avatar
+        cell.allFriends?.text = friend.names
         
         return cell
     }
-    
-    
-    
-    
     
     @IBAction func logout(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -128,11 +90,8 @@ import UIKit
             
             if let indexPath = tableView.indexPathForSelectedRow {
                 
-                let friendName = friendsArray[indexPath.row]
-                let friendImage = friendsPicArray[indexPath.row]
-                
-                secondVC.myFriendNames = [friendName]
-                secondVC.myFriendPicture = [friendImage]
+                secondVC.myFriend = friends[indexPath.row]
+                //secondVC.myFriendPicture = [friendImage]
             }
         }
     }
