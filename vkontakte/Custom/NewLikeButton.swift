@@ -50,13 +50,16 @@ class NewLikeButton: UIControl {
         
         self.isLiked = !self.isLiked
         
+        let animation = CABasicAnimation(keyPath: "position.y")
+        animation.fromValue = layer.bounds.origin.y
+        animation.toValue = layer.bounds.origin.y - 0.5
+        animation.duration = 0.2
+        iconImageView?.layer.add(animation, forKey: nil)
+        
     }
     
     private func setAppearance() {
-        
-        self.backgroundColor = UIColor.white
-        //self.iconImageView
-        
+        self.backgroundColor = UIColor.clear
     }
     
     override func layoutSubviews() {

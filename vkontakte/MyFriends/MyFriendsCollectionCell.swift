@@ -12,5 +12,6 @@ class MyFriendsCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var myFriendPic: UIImageView!
     @IBOutlet weak var myFriendsName: UILabel!
-    
+
+
 }

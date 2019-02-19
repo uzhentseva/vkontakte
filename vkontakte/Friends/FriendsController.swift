@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Section {
+struct Friend {
     
     let names : String
     var avatar: UIImage? {
@@ -16,13 +16,16 @@ struct Section {
     var letter: Character {
         return names.first as! Character
     }
-
 }
 
 @IBDesignable class FriendsController: UITableViewController {
     
     
-    var friends: [Section] = []
+    var friends: [Friend] = []
+
+    
+    var friendsInSections: [String: [Friend]] = [:]
+    var section: [String] = []
     
     @IBInspectable var shadowOffset: CGSize = CGSize.zero
     @IBInspectable var shadowOpacity: Float = 0.6
@@ -32,17 +35,16 @@ struct Section {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         friends = [
-            Section(names: "Rachel"),
-            Section(names: "Monika"),
-            Section(names: "Phoebe"),
-            Section(names: "Ross"),
-            Section(names: "Chandler"),
-            Section(names: "Joe"),
-            Section(names: "Janice"),
-            Section(names: "Jill")
-        ]
+            Friend(names: "Rachel"),
+            Friend(names: "Monika"),
+            Friend(names: "Phoebe"),
+            Friend(names: "Ross"),
+            Friend(names: "Chandler"),
+            Friend(names: "Joe"),
+            Friend(names: "Janice"),
+            Friend(names: "Jill")]
         
         self.tableView.reloadData()
         
@@ -53,9 +55,9 @@ struct Section {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friends.count
     }
-
     
     // get the list of friends
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsCell
         
@@ -71,7 +73,7 @@ struct Section {
         let friend = self.friends[indexPath.row]
 
         cell.friendImage.image = friend.avatar
-        cell.allFriends?.text = friend.names
+        cell.allFriends?.text = friend.names //+ " \(friend.letter)"
         
         return cell
     }
@@ -91,7 +93,6 @@ struct Section {
             if let indexPath = tableView.indexPathForSelectedRow {
                 
                 secondVC.myFriend = friends[indexPath.row]
-                //secondVC.myFriendPicture = [friendImage]
             }
         }
     }

@@ -19,8 +19,11 @@ class View: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setAppearance()
     }
 
-    
+    private func setAppearance() {
+        self.view.backgroundColor = UIColor.white
+    }
     
 }

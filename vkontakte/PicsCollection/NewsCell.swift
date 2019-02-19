@@ -10,4 +10,7 @@ import UIKit
 
 class NewsCell: UICollectionViewCell {
     
+   // @IBOutlet weak var newsPicture: NewsImage!
+   // @IBOutlet weak var newsTitle: UILabel!
+    
 }

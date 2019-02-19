@@ -7,65 +7,33 @@
 //
 
 import UIKit
+import QuartzCore
 
 class LoginFormController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
-    
     @IBOutlet weak var VkLogo: UIImageView!
     @IBOutlet weak var VkLabel: UILabel!
-    
     @IBOutlet weak var EnterButton: UIButton!
+    
+    @IBOutlet weak var circle1: UIView!
+    @IBOutlet weak var circle2: UIView!
+    @IBOutlet weak var circle3: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setCircleView()
         
         EnterButton.layer.cornerRadius = 10
         
         // жест нажатия
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        
         // присваиваем его UIScrollVIew
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
-        
-        UIView.animate(withDuration: 1.5, delay: 0, options: [.repeat],
-                       animations: {
-                        //self.VkLogo.alpha = 1
-                        self.VkLogo.alpha = 0
-        })
-        
-        UIView.animate(withDuration: 1.5, delay: 0.5, options: [.repeat],
-                       animations: {
-                        //self.VkLabel.alpha = 1
-                        self.VkLabel.alpha = 0
-        })
-        
-        //
-        //        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut],
-        //                       animations: {
-        //                        self.loginInput.center.x += self.view.bounds.width
-        //        },
-        //                       completion: nil
-        //        )
-        //
-        //        UIView.animate(withDuration: 0.3, delay: 0.3, options: [.curveEaseOut],
-        //                       animations: {
-        //                        self.passwordInput.center.x += self.view.bounds.width
-        //        },
-        //                       completion: nil
-        //        )
-        //
-        //        UIView.animate(withDuration: 0.3, delay: 0.6, options: [.curveEaseOut],
-        //                       animations: {
-        //                        self.EnterButton.center.x += self.view.bounds.width
-        //        },
-        //                       completion: nil
-        //        )
-        
-        
-        
-        
         
     }
     
@@ -84,6 +52,7 @@ class LoginFormController: UIViewController {
     
     //Когда клавиатура исчезает
     @objc func keyboardWillBeHidden(notification: Notification) {
+        
         // Устанавливаем отступ внизу UIScrollView, равный 0
         let contentInsets = UIEdgeInsets.zero
         scrollView?.contentInset = contentInsets
@@ -146,6 +115,33 @@ class LoginFormController: UIViewController {
         alter.addAction(action)
         
         present(alter, animated: true, completion: nil)
+    }
+    
+    func setCircleView() {
+        
+        circle1.layer.cornerRadius = circle1.frame.size.width / 2.0
+        circle2.layer.cornerRadius = circle2.frame.size.width / 2.0
+        circle3.layer.cornerRadius = circle3.frame.size.width / 2.0
+
+        self.circle1.backgroundColor = .white
+        self.circle2.backgroundColor = .white
+        self.circle3.backgroundColor = .white
+        
+        UIView.animate(withDuration: 0.8, delay: 0, options: [.repeat],
+                       animations: {
+                        self.circle1.alpha = 0
+        })
+        
+        UIView.animate(withDuration: 0.8, delay: 1, options: [.repeat],
+                       animations: {
+                        self.circle2.alpha = 0
+        })
+        
+        UIView.animate(withDuration: 0.8, delay: 2, options: [.repeat],
+                       animations: {
+                        self.circle3.alpha = 0
+        })
+        
     }
     
 }
