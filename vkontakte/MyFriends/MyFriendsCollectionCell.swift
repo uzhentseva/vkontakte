@@ -19,20 +19,6 @@ class MyFriendsCollectionCell: UICollectionViewCell {
         self.addGestures()
     }
     
-    
-//    func animateIt() {
-//        let animation = CASpringAnimation(keyPath: "transform.scale")
-//        animation.fromValue = 0
-//        animation.toValue = 1
-//        animation.stiffness = 200
-//        animation.mass = 2
-//        animation.duration = 2
-//        animation.beginTime = CACurrentMediaTime() + 0.2
-//        animation.fillMode = CAMediaTimingFillMode.backwards
-//
-//        self.myFriendPic.layer.add(animation, forKey: nil)
-//    }
-    
         func addGestures() {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapAction(tap:)))
     

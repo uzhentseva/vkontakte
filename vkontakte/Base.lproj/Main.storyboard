@@ -532,7 +532,7 @@
         <scene sceneID="3AR-xi-zdO">
             <objects>
                 <viewController id="eep-tf-I45" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HcB-6u-jIc">
+                    <view key="view" contentMode="scaleToFill" id="HcB-6u-jIc" customClass="MyFriendAllPictures" customModule="vkontakte" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -548,6 +548,9 @@
                             <constraint firstItem="aF7-n6-cee" firstAttribute="trailing" secondItem="8z8-sV-Kcw" secondAttribute="trailing" id="eix-fF-ZHq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aF7-n6-cee"/>
+                        <connections>
+                            <outlet property="AllImages" destination="8z8-sV-Kcw" id="qmr-Dg-wex"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7s-GU-WRI" userLabel="First Responder" sceneMemberID="firstResponder"/>

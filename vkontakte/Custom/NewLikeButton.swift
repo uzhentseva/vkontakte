@@ -50,10 +50,13 @@ class NewLikeButton: UIControl {
         
         self.isLiked = !self.isLiked
         
-        let animation = CABasicAnimation(keyPath: "position.y")
-        animation.fromValue = layer.bounds.origin.y
-        animation.toValue = layer.bounds.origin.y - 0.5
-        animation.duration = 0.2
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.stiffness = 200
+        animation.mass = 2
+        animation.duration = 1.5
+        animation.fillMode = CAMediaTimingFillMode.backwards
         iconImageView?.layer.add(animation, forKey: nil)
         
     }

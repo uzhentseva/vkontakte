@@ -37,14 +37,14 @@ class MyFriendsCollectionController: UICollectionViewController {
         return cell
     }
     
-    func CustomViewAnimation(imageView: UIImageView, images: [UIImage]) {
-        imageView.animationImages = images
-        imageView.alpha = 0
-        imageView.animationDuration = 0.5
-        imageView.animationRepeatCount = 1
-        imageView.startAnimating()
-    }
-    
+//    func CustomViewAnimation(imageView: UIImageView, images: [UIImage]) {
+//        imageView.animationImages = images
+//        imageView.alpha = 0
+//        imageView.animationDuration = 0.5
+//        imageView.animationRepeatCount = 1
+//        imageView.startAnimating()
+//    }
+//
 
 
 
